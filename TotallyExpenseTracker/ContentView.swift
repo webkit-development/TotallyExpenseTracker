@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAddScreen = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            TabView {
+                
+            }
+            .navigationTitle("TotallyExpenseTracker")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button {
+                    showAddScreen = true
+                } label: {
+                    Image(systemName: "plus.square.fill")
+                }
+            }
+        }
     }
 }
 
